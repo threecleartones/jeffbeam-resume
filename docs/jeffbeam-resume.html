@@ -60,6 +60,15 @@
           margin-bottom: .6em;
         }
 
+      /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+      .visually-hidden {
+        position: absolute !important;
+        height: 1px; width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+
       /* desktop
       ....................................................................... */
       @media (min-width: 33.236em) {
@@ -118,7 +127,11 @@
         }
 
           .resume-summary .resume-section__heading {
-            display: none;
+            position: absolute !important;
+            height: 1px; width: 1px;
+            overflow: hidden;
+            clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+            clip: rect(1px, 1px, 1px, 1px);
           }
 
           .resume-summary__blurb {
